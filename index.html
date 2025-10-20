@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Garage Wars: The Race to Repair — Web Demo</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div id="app" class="app">
+  <div class="left">
+    <div class="board" id="board">
+      <img src="assets/board.png" id="boardImg" alt="Garage Wars board">
+      <div id="tokens" class="tokens"></div>
+    </div>
+  </div>
+  <div class="right">
+    <h2>Garage Wars — Web Demo</h2>
+    <div class="controls">
+      <label>Players:
+        <select id="playerCount">
+          <option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option>
+        </select>
+      </label>
+      <button id="newGame">New Game</button>
+      <button id="rollBtn">Roll Dice & Move</button>
+      <button id="drawTool">Draw Tool</button>
+      <button id="attemptRepair">Attempt Stored Repair</button>
+    </div>
+    <div class="info">
+      <p id="turnInfo">Turn: -</p>
+      <p id="lastRoll">Last Roll: -</p>
+      <p id="tools">Tools: -</p>
+      <p id="parts">Parts: 0</p>
+      <h3>Game Log</h3>
+      <div id="log" class="log"></div>
+    </div>
+  </div>
+</div>
+
+<!-- modal -->
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <button id="closeModal" class="close">Close</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="assets/game.js"></script>
+</body>
+</html>
